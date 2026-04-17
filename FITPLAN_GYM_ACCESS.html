@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FitPlan - Home</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body { 
+            font-family: Arial; 
+            background: #000; 
+            color: white; 
+        }
+        
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #000;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+            z-index: 1000;
+        }
+        
+        .logo { 
+            font-size: 28px; 
+            color: #00ff00; 
+            font-weight: bold; 
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+        }
+        
+        nav a:hover { color: #00ff00; }
+        
+        .join-btn {
+            background: #00ff00;
+            color: black;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        main { margin-top: 90px; }
+        
+        .hero {
+            height: 100vh;
+            background: 
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop') 
+                center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero h1 { font-size: 48px; margin-bottom: 20px; }
+        .highlight { color: #00ff00; }
+        .hero p { font-size: 20px; margin-bottom: 30px; color: #ccc; }
+        
+        .btn {
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            background: #00ff00;
+            color: black;
+            display: inline-block;
+            margin: 10px;
+        }
+        
+        .btn:hover { transform: translateY(-3px); }
+        
+        .section {
+            padding: 60px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        .why-image {
+            height: 400px;
+            background: 
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1000&auto=format&fit=crop') 
+                center/cover no-repeat;
+            border-radius: 15px;
+        }
+        
+        .why-item {
+            background: #222;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #00ff00;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .why-item:hover {
+            background: #00ff00;
+            color: black;
+            transform: translateX(16px);
+        }
+        
+        .stats {
+            background: #111;
+            text-align: center;
+            padding: 50px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .stat-number { 
+            font-size: 36px; 
+            color: #00ff00; 
+            margin-bottom: 10px;
+        }
+        
+        .programs {
+            background: #111;
+            text-align: center;
+            padding: 60px 50px;
+        }
+        
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .program-card {
+            background: #222;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border-top: 4px solid #00ff00;
+        }
+        
+        .program-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #00ff00;
+        }
+        
+        .program-duration {
+            color: #00ff00;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .program-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        
+        .program-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .program-features li::before {
+            content: "âœ“";
+            position: absolute;
+            left: 0;
+            color: #00ff00;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            header { padding: 20px; flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 32px; }
+            .why-grid, .stats-grid, .programs-grid { grid-template-columns: 1fr; }
+            .section { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">FitPlan</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="signup.html" class="join-btn">Join Now</a>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div>
+                <h1>NO EXCUSES.<br>
+                    <span class="highlight">ONLY</span><br>RESULTS.
+                </h1>
+                <p>Transform your body with certified trainers, modern equipment!</p>
+                <a href="signup.html" class="btn">Start Free Trial</a>
+            </div>
+        </section>
+
+        <section class="stats">
+            <h2 class="section-title">Trusted By Thousands</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10K+</div>
+                    <p>Members</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5+</div>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9</div>
+                    <p>Average Rating</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Why Choose FitPlan?</h2>
+            <div class="why-grid">
+                <div class="why-image"></div>
+                <div>
+                    <div class="why-item">
+                        <h3>Certified Trainers</h3>
+                        <p>Expert coaches create science-backed workout programs</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Modern Equipment</h3>
+                        <p>State-of-the-art gym with latest fitness technology</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Nutrition Plans</h3>
+                        <p>Custom meal plans tailored to your goals</p>
+                    </div>
+                    <div class="why-item">
+                        <h3>Real Community</h3>
+                        <p>Motivated members who push you to succeed</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="programs">
+            <h2 class="section-title">Our Training Programs</h2>
+            <p style="font-size: 20px; color: #ccc; max-width: 600px; margin: 0 auto 40px;">
+                From beginners to advanced athletes, we have the perfect program for you.
+            </p>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3 class="program-title">Beginner Transformation</h3>
+                    <div class="program-duration">12 Weeks</div>
+                    <ul class="program-features">
+                        <li>3x weekly full-body workouts</li>
+                        <li>Beginner-friendly exercises</li>
+                        <li>Custom nutrition plan</li>
+                        <li>Weekly progress tracking</li>
+                    </ul>
+                    <a href="signup.html" class="btn">Start Now</a>
+                </div>
+
+                <div class="program-card">
+                    <h3 class="program-title">Fat Burn Pro</h3>
+                    <div class="program-duration">8 Weeks</div>
+                    <ul class="program-features">
+                        <li>HIIT + strength training</li>
+                        <li>Calorie tracking app</li>
+                        <li>4x weekly sessions</li>
+                        <li>Metabolism boost focus</li>
+                    </ul>
+                    <a href="signup.html" class="btn">Get Lean</a>
+                </div>
+
+                <div class="program-card">
+                    <h3 class="program-title">Muscle Builder</h3>
+                    <div class="program-duration">16 Weeks</div>
+                    <ul class="program-features">
+                        <li>5x weekly split training</li>
+                        <li>Progressive overload</li>
+                        <li>Protein optimization</li>
+                        <li>1:1 trainer sessions</li>
+                    </ul>
+                    <a href="signup.html" class="btn">Build Mass</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
